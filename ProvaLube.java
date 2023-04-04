@@ -6,10 +6,13 @@ public class ProvaLube  extends AdvancedRobot {
      private int moveDirection = 1;
 
     public void run() {
+	//Define a arma para girar independente da rotação do robô.
         setAdjustGunForRobotTurn(true);
+	//Define o radar para girar independente da curva da arma.
         setAdjustRadarForGunTurn(true);
         
         while (true) {
+	    // Matem o radar girando infinitamente, a idéia é ficar buscando outros robos que estejam se movendo
             setTurnRadarRightRadians(Double.POSITIVE_INFINITY);
             setAhead(100);
             execute();
