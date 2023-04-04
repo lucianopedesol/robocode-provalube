@@ -28,7 +28,7 @@ public class ProvaLube  extends AdvancedRobot {
 	    
 	//Ângulo em radianos do robô adversário em relação ao seu.
 	double enemyBearing = e.getBearingRadians();
-	//Retorna o ângulo em radiaons do adversário em relação a tela.
+	//Retorna o angulo em radianos em que o robô escaneado está virado
 	double enemyHeading = e.getHeadingRadians();
 	// Calcula o ângulo necessário para girar a arma e mirar no inimigo
 	double bearingFromGun = Utils.normalRelativeAngle(enemyBearing - getGunHeadingRadians() + enemyHeading);
