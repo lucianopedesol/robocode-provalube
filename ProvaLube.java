@@ -34,10 +34,10 @@ public class ProvaLube  extends AdvancedRobot {
 	double bearingFromGun = Utils.normalRelativeAngle(enemyBearing - getGunHeadingRadians() + enemyHeading);
 	// Se o angulo for menor que 3 atira com mais força 
     	if (Math.abs(bearingFromGun) < Math.toRadians(3)) {
-	    setFire(3);
+	    setFire(10);
     	} 
 	// Se não, fica atirando normalmente
-        fire(1);
+        fire(5);
     }
 	
     //Fugir para alguma direção aleatoria quando for atingido.
