@@ -21,19 +21,19 @@ public class ProvaLube  extends AdvancedRobot {
         double gunTurn = getHeadingRadians() + e.getBearingRadians() - getGunHeadingRadians();
         setTurnRadarRightRadians(Utils.normalRelativeAngle(radarTurn));
         setTurnGunRightRadians(Utils.normalRelativeAngle(gunTurn)); 
-		double enemyBearing = e.getBearingRadians();
-	    double enemyHeading = e.getHeadingRadians();
-	    double bearingFromGun = Utils.normalRelativeAngle(enemyBearing - getGunHeadingRadians() + enemyHeading);
+	double enemyBearing = e.getBearingRadians();
+	double enemyHeading = e.getHeadingRadians();
+	double bearingFromGun = Utils.normalRelativeAngle(enemyBearing - getGunHeadingRadians() + enemyHeading);
 	    
-	    if (Math.abs(bearingFromGun) < Math.toRadians(3)) {
-	        setFire(3);
-	    } 
+    	if (Math.abs(bearingFromGun) < Math.toRadians(3)) {
+	    setFire(3);
+    	} 
         fire(1);
-	 
     }
 	
     public void onHitByBullet(HitByBulletEvent e) {
-        moveDirection = -moveDirection; // inverte a direção do movimento
+        // inverte a direção do movimento
+        moveDirection = -moveDirection; 
 
         // Vira para um lado aleatório
         if (Math.random() > 0.5) {
