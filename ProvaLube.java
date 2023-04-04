@@ -57,6 +57,6 @@ public class ProvaLube  extends AdvancedRobot {
         execute();
     }
 
-	//Criar evento para se mover quando encostar na parede ....
+	//Criar evento para se mover quando encostar na parede ....não deu tempo :D
  
 }
